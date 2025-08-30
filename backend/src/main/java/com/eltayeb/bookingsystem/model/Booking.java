@@ -8,9 +8,11 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
-import java.sql.Timestamp;
 import java.sql.Date;
+import java.time.LocalDateTime;
 
 @Entity
 @Data
@@ -25,7 +27,11 @@ public class Booking {
     private Long service_id;
     private Date booking_date;
     private Enum<Status> status;
-    private Timestamp createdAt;
+    @CreationTimestamp
+    private LocalDateTime createdAt; // سيتم تعيينه تلقائيًا عند الإنشاء
+
+    @UpdateTimestamp
+    private LocalDateTime updatedAt;
 
     enum Status {
         PENDING,

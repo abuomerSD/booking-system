@@ -2,8 +2,10 @@ package com.eltayeb.bookingsystem.model;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "users")
@@ -19,7 +21,8 @@ public class User {
     private String email;
     private String password;
     private Enum<UserRole> role;
-    private Timestamp createdAt;
+    @CreationTimestamp
+    private LocalDateTime createdAt;
 
     enum UserRole {
         ADMIN,

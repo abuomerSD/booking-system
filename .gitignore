@@ -1,0 +1,49 @@
+### Java / Spring Boot ###
+/backend/target/
+/backend/.classpath
+/backend/.project
+/backend/.settings/
+/backend/.idea/
+/backend/*.iml
+/backend/out/
+/backend/logs/
+/backend/*.log
+
+# Maven wrapper
+/backend/.mvn/
+/backend/mvnw
+/backend/mvnw.cmd
+
+# Gradle wrapper
+/backend/.gradle/
+/backend/gradlew
+/backend/gradlew.bat
+/backend/build/
+
+# Environment files
+/backend/application-*.yml
+/backend/application-*.properties
+
+### React / Node.js ###
+/frontend/node_modules/
+/frontend/build/
+/frontend/dist/
+/frontend/.cache
+/frontend/.env.local
+/frontend/.env.development.local
+/frontend/.env.test.local
+/frontend/.env.production.local
+
+# Logs
+/frontend/npm-debug.log*
+/frontend/yarn-debug.log*
+/frontend/yarn-error.log*
+/frontend/pnpm-debug.log*
+
+### Common ###
+.DS_Store
+*.swp
+*.swo
+*.idea/
+*.iml
+.vscode/

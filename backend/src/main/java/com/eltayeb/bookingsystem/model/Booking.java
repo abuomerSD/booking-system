@@ -28,8 +28,7 @@ public class Booking {
     private Date booking_date;
     private Enum<Status> status;
     @CreationTimestamp
-    private LocalDateTime createdAt; // سيتم تعيينه تلقائيًا عند الإنشاء
-
+    private LocalDateTime createdAt;
     @UpdateTimestamp
     private LocalDateTime updatedAt;
 

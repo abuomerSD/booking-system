@@ -1,7 +1,11 @@
-import React from "react";
+import AdminNavbar from "../components/AdminNavbar";
 
 const AdminLayout = () => {
-  return <div>AdminLayout</div>;
+  return (
+    <>
+      <AdminNavbar />
+    </>
+  );
 };
 
 export default AdminLayout;

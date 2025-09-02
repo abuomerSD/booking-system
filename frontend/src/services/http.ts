@@ -13,38 +13,38 @@ const axiosInstance = axios.create({
 
 const http = {
   get: async (url: string) => {
-    try {
-      const res = await axiosInstance.get(url);
-      return res.data;
-    } catch (error: Error) {
-      console.log(error.message);
-    }
+    await axiosInstance
+      .get(url)
+      .then((res) => {
+        return res.data;
+      })
+      .catch((error) => console.log(error.message));
   },
-  post: async (url, data) => {
-    try {
-      const res = await axiosInstance.post(url, data);
-      return res.data;
-    } catch (error) {
-      console.log(error.message);
-    }
+  post: async (url: string, data: object) => {
+    await axiosInstance
+      .post(url, data)
+      .then((res) => {
+        return res.data;
+      })
+      .catch((error) => console.log(error.message));
   },
-  put: async (url, id, data) => {
+  put: async (url: string, id: string, data: object) => {
     url += `/${id}`;
-    try {
-      const res = await axiosInstance.put(url, data);
-      return res.data;
-    } catch (error) {
-      console.log(error.message);
-    }
+    await axiosInstance
+      .put(url, data)
+      .then((res) => {
+        return res.data;
+      })
+      .catch((error) => console.log(error.message));
   },
-  delete: async (url, id) => {
+  delete: async (url: string, id: string) => {
     url += `/${id}`;
-    try {
-      const res = await axiosInstance.delete(url);
-      return res.data;
-    } catch (error) {
-      console.log(error.message);
-    }
+    await axiosInstance
+      .delete(url)
+      .then((res) => {
+        return res.data;
+      })
+      .catch((error) => console.log(error.message));
   },
 };
 
